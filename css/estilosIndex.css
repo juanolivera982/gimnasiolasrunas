@@ -1,16 +1,16 @@
 body{
 	width: 100%;
-	height: auto;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 header{
 	width: 100%;
-	height: 200px;
+	height: 60px;
 	font-family: sans-serif;
 	background-color: #212529;
 	display: flex;
-
-	border: 2px solid green;
 }
 
 nav{
@@ -21,7 +21,7 @@ nav{
 .item{
 	text-decoration: none;
 	color: #ffffff;
-	line-height: 1.6;
+	/*line-height: 1.6;*/
 	padding: 6px;
 	border-radius: 5px;
 }
@@ -38,7 +38,8 @@ nav ul{
 	width: auto;
 	display: flex;
 	float: right;
-	margin-top: 0;
+	margin: auto;
+	padding: 6px 0;
 	list-style: none;
 }
 
@@ -53,7 +54,7 @@ nav ul li{
 	padding-left: 0;/*los li deben estar pegados a la izquierda para poder centra los a*/
 	width: 100%;
 	display: none; 
-	background-color: #313131;
+	background-color: #212529;
 
 }
 
@@ -65,6 +66,8 @@ nav ul li{
 
 #actividades li a{
 	display: block;
+	position: relative;
+	padding: 6px 0;
 	width: 100%;
 	text-align: center;
 	border-radius: 0;
@@ -73,32 +76,33 @@ nav ul li{
 
 #contenedorActividades:hover #actividades{
 	display: inline-block; 
-	overflow: hidden;
 }
 
 
 /*logo*/
 #contenedorLogo{
-	width: 200px;
-	height: auto;
-	display: inline-block;
-	border: 2px solid blue;
+	display: block;
 }
 
 #contenedorLogo svg{
-	width: 120px;
-	height: 120px;
-	margin-right: 0;
-	margin-left: auto;
+	width: 50px;
+	height:50px;
+	fill: #ffffff;
+	display: block;
+	margin: auto;
+	padding: 4px 0;
+	padding-left: 10px;
+	overflow: hidden;
 
-	border: 2px solid red;
 }
 
+
+
 #nombreGimnacio{
+	font-family: sans-serif;
 	width: 100%;
-	color: #ffffff;
 	text-align: center;
-	border: 2px solid yellow;
+
 }
 
 #imagenCabecera img{
