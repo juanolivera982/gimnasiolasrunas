@@ -18,8 +18,23 @@ nav{
 	height: auto;
 }
 
+.item{
+	text-decoration: none;
+	color: #ffffff;
+	line-height: 1.6;
+	padding: 6px;
+	border-radius: 5px;
+}
+
+.item:hover{
+	background-color: #a1a1a1a1;
+	transition: .5s;
+	overflow: hidden;
+}
+
+/*items del nav*/
+
 nav ul{
-	/*border: 2px solid blue;*/
 	width: auto;
 	display: flex;
 	float: right;
@@ -29,55 +44,32 @@ nav ul{
 
 nav ul li{
 	margin: 10px;
+	padding: 3px;
 }
 
-nav ul li a{
-
-	text-decoration: none;
-	color: #ffffff;
-	line-height: 1.6;
-	padding: 6px;
-	border-radius: 5px;
-}
-
-nav ul li a:hover{
-	background-color: #a1a1a1a1;
-	transition: .5s;
-}
-
+/*sub-items del menu actividades*/
 #actividades{
-	position: relative;
-	padding-left: 0;
+	position: relative; /*nos aseguramos que pueda desplegarse fuera de los bordes del padre*/
+	padding-left: 0;/*los li deben estar pegados a la izquierda para poder centra los a*/
 	width: 100%;
 	display: none; 
 	background-color: #313131;
 
-	/*border: 2px solid yellow;*/
 }
 
 
 #actividades li{
-	align-items: center;
 	padding: 0;
 	margin: 0;
 }
 
 #actividades li a{
-	display: inline-block;
+	display: block;
 	width: 100%;
-	padding-left: 1px;
-	padding-right: 1px;
 	text-align: center;
 	border-radius: 0;
-	/*border: 2px solid blue;*/
 }
 
-#contenedorActividades{
-
-	/*outline: 2px solid red;*/
-	align-items: center;
-	justify-content: center;
-}
 
 #contenedorActividades:hover #actividades{
 	display: inline-block; 
@@ -85,6 +77,7 @@ nav ul li a:hover{
 }
 
 
+/*logo*/
 #contenedorLogo{
 	width: 200px;
 	height: auto;
