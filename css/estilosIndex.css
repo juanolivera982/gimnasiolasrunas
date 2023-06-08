@@ -1,8 +1,7 @@
-body{
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 header{
@@ -11,6 +10,7 @@ header{
 	font-family: sans-serif;
 	background-color: #212529;
 	display: flex;
+	position: relative;
 }
 
 nav{
@@ -22,7 +22,7 @@ nav{
 	text-decoration: none;
 	color: #ffffff;
 	/*line-height: 1.6;*/
-	padding: 6px;
+	padding: 9px;
 	border-radius: 5px;
 }
 
@@ -81,22 +81,15 @@ nav ul li{
 
 /*logo*/
 #contenedorLogo{
-	display: block;
+	height: 100%;
+	margin-left: 1%;
 }
 
 #contenedorLogo svg{
-	width: 50px;
-	height:50px;
+	width: 100%;
+	height: 100%;
 	fill: #ffffff;
-	display: block;
-	margin: auto;
-	padding: 4px 0;
-	padding-left: 10px;
-	overflow: hidden;
-
 }
-
-
 
 #nombreGimnacio{
 	font-family: sans-serif;
@@ -109,4 +102,46 @@ nav ul li{
 	width: 100%;
 	height: 600px;
 }
+
+#linkHaburguesa{
+	/*display: none;*/
+}
+
+#linkHaburguesa:hover{
+	background-color: #a1a1a1a1;
+}
+
+/*responsive*/
+
+@media (max-width: 700px){
+	nav{
+		display: none;
+	}
+
+	#linkHaburguesa{
+		display: block;
+		width: 20%;
+		height: 100%;
+	}
+
+
+	#linkHaburguesa svg{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+
+	#contenedorLogo{
+		/*centramos el logo*/
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+}
+
 
