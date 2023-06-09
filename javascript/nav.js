@@ -1,8 +1,11 @@
 function desplegarMenu()
 {
-	var hamburguesa = document.getElementById("linkHamburguesa");
 	var nav = document.querySelector("nav");
-	nav.style.display = "inline-block";
+	if(nav.style.display === "block"){
+		nav.style.display = "none";
+	}else{
+		nav.style.display = "block";
+	}
 }
 
 function inicio()
@@ -12,3 +15,16 @@ function inicio()
 }
 
 window.addEventListener("load", inicio);
+//nos aseguramos que el nav sea visible cuando agrandamos el display e invisible
+//cuando lo achicamos.
+window.addEventListener("resize", () => {
+
+	var nav = document.querySelector("nav");
+	if(window.innerWidth >= 700){
+		nav.style.display = "block";
+	}else{
+		nav.style.display = "none";
+	}
+
+
+});

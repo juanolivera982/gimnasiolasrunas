@@ -8,12 +8,13 @@ header{
 	width: 100%;
 	height: 60px;
 	font-family: sans-serif;
-	background-color: #212529;
 	display: flex;
 	position: relative;
+	background-image: linear-gradient(#212529, #4f4f4f);
 }
 
 nav{
+	display: block;
 	width: 100%;
 	height: auto;
 }
@@ -103,9 +104,18 @@ nav ul li{
 	height: 600px;
 }
 
-#linkHaburguesa{
-	/*display: none;*/
+#contenedorHaburguesa{
+	display: none;
 }
+
+#linkHaburguesa{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 10;/*evita que otros elementos se superpongan sobre el link y no nos dejen hacer click*/
+}
+
 
 #linkHaburguesa:hover{
 	background-color: #a1a1a1a1;
@@ -116,12 +126,28 @@ nav ul li{
 @media (max-width: 700px){
 	nav{
 		display: none;
+
+		/*position: relative;*/
 	}
 
-	#linkHaburguesa{
+	nav ul{
+		position: absolute;
 		display: block;
-		width: 20%;
+		top: 100%;
+		width: 100vh;/*el elemento toma todo el ancho de la pantalla*/
+		background-color: #212529;
+
+	}
+
+	#actividades{
+		position: relative;
+	}
+
+	#contenedorHaburguesa{
+		position: absolute;
 		height: 100%;
+		width: 20%;
+		display: block;
 	}
 
 
@@ -143,5 +169,4 @@ nav ul li{
 	}
 
 }
-
 
