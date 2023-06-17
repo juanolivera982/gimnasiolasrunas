@@ -127,7 +127,7 @@ nav ul{
 
 	.contenedorMenu{
 		position: absolute;
-		display: inline table;
+		display: table;
 		top: 100%;
 		width: 65vh;/*el elemento toma todo el ancho de la pantalla*/
 		background-color: #212529;
