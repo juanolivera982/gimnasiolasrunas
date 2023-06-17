@@ -20,64 +20,60 @@ nav{
 }
 
 .item{
+	display: flex;
 	text-decoration: none;
 	color: #ffffff;
 	/*line-height: 1.6;*/
-	padding: 9px;
-	border-radius: 5px;
+	height: 100%;
+	padding: 1em;
+	position: relative;
 }
 
 .item:hover{
 	background-color: #a1a1a1a1;
 	transition: .5s;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 /*items del nav*/
 
-nav ul{
+/*trabajar con clases*/
+.contenedorMenu{
 	width: auto;
 	display: flex;
 	float: right;
-	margin: auto;
-	padding: 6px 0;
+	padding: 0 .5em 0;
+	height: 100%;
+}
+
+nav ul{
 	list-style: none;
 }
 
-nav ul li{
-	margin: 10px;
-	padding: 3px;
-}
 
 /*sub-items del menu actividades*/
-#actividades{
-	position: relative; /*nos aseguramos que pueda desplegarse fuera de los bordes del padre*/
+.actividades{
+	position: absolute; /*nos aseguramos que pueda desplegarse fuera de los bordes del padre*/
 	padding-left: 0;/*los li deben estar pegados a la izquierda para poder centra los a*/
-	width: 100%;
 	display: none; 
 	background-color: #212529;
-
 }
 
 
-#actividades li{
+.actividades li{
 	padding: 0;
 	margin: 0;
+	height: 100%;
 }
 
-#actividades li a{
-	display: block;
-	position: relative;
-	padding: 6px 0;
+.actividades li a{
+	display: inline-block;
+	padding: 1em;
 	width: 100%;
 	text-align: center;
 	border-radius: 0;
 }
 
-
-#contenedorActividades:hover #actividades{
-	display: inline-block; 
-}
 
 
 /*logo*/
@@ -129,19 +125,23 @@ nav ul li{
 		display: none;
 	}
 
-	nav ul{
+	.contenedorMenu{
 		position: absolute;
-		display: block;
+		display: inline table;
 		top: 100%;
-		width: 100vh;/*el elemento toma todo el ancho de la pantalla*/
+		width: 65vh;/*el elemento toma todo el ancho de la pantalla*/
 		background-color: #212529;
-
 	}
 
-	#actividades{
+	.actividades{
 		position: relative;
 	}
 
+	.item{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	/*esto muestra el menú hambuguesa*/
 	#contenedorHaburguesa{
 		position: absolute;
 		height: 100%;
